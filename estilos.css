@@ -1,45 +1,121 @@
-body {
-    font-family: Arial, sans-serif;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+
+:root {
+    --principal: #0097A7; 
+    --gris-claro: #F5F5F5; 
+    --gris-medio: #CCCCCC;
+    --blanco: #FFFFFF;
+    --negro: #333333;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+}
+
+
 header {
-    background-color: #003366;
-    color: white;
-    padding: 10px;
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 20px;
     text-align: center;
 }
 
-nav a {
-    color: white;
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: var(--blanco);
     margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 section {
-    margin: 20px;
+    background-color: var(--blanco);
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
 .carrusel-img {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
     width: 100%;
+    height: auto;
     max-height: 400px;
     object-fit: cover;
 }
 
+/* Formulario */
 form {
-    margin: 20px;
+    background-color: var(--gris-claro);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-form label, form input, form button {
+form label {
+    margin-top: 10px;
+    font-weight: bold;
     display: block;
-    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form button {
     width: 100%;
-    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 5px;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    background-color: var(--principal);
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #007C8A;
 }
 
 #mensajeConfirmacion {
-    margin: 20px;
-    color: green;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #DFF0D8;
+    border: 1px solid #3C763D;
+    border-radius: 5px;
+    color: #3C763D;
     font-weight: bold;
 }
