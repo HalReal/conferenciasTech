@@ -11,10 +11,10 @@ document.getElementById("registroForm").addEventListener("submit", function(even
         return;
     }
 
-    if (!correo.endsWith("@uam.edu.ni")) {
+    if (!correo.endsWith("@uamv.edu.ni")) {
         alert("Debe usar su correo institucional (@uam.edu.ni).");
         return;
     }
 
-    document.getElementById("mensajeConfirmacion").innerHTML = "<p>¡Registro exitoso! Nos vemos en las conferencias.</p>";
+    document.getElementById("mensajeConfirmacion").innerHTML = "<p> Su registro ha sido completado con éxito ¡Nos vemos en las conferencias!</p>";
 });
